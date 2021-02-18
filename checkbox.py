@@ -79,6 +79,12 @@ class LoginFrame(tkinter.Frame):
         
 # Checkbutton
 
+        self.cek = StringVar() 
+        
+        def text():
+            self.text = Label(self)
+            self.text['text']=self.cek.get()
+            self.text.grid(row=3, column=1)
         self.show = Checkbutton(self,
             activebackground='#91091e',
             activeforeground='#94ebcd'
@@ -92,6 +98,8 @@ class LoginFrame(tkinter.Frame):
         self.show['fg'] = '#0a043c'
         self.show['height'] = '1'
         self.show['justify'] = 'left'
+        self.show['offvalue']="Off"
+        self.show['onvalue']="On"
         self.show['padx'] = '20'
         self.show['pady'] = '20'
         self.show['relief'] = 'sunken'
@@ -100,9 +108,18 @@ class LoginFrame(tkinter.Frame):
         self.show['cursor'] = 'heart' 
         self.show['text'] = 'Tampilkan Password'
         self.show['underline'] = '0'
-        self.show['variable'] = 'checkbox1'
+        self.show['variable'] = self.cek
         self.show['width'] = '10'
         self.show.grid(row=3, column=0, sticky=W)
+
+        
+        def text():
+            self.text = Label(self)
+            self.text['text']=self.cek.get()
+            self.text.grid(row=3, column=1)
+
+        self.show['command'] = text
+
 # gambar
         self.gambar = Checkbutton(self)
         # deklarasi foto
@@ -143,6 +160,7 @@ class LoginFrame(tkinter.Frame):
         self.namaSelect['text'] = 'toogle'
         # membuat grid
         self.namaSelect.grid(row=4, column=2, sticky=W)
+        
 
 
 

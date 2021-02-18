@@ -11,7 +11,7 @@ class Application(tk.Frame):
         self.xScroll = tk.Scrollbar(self, orient=tk.HORIZONTAL)
         self.xScroll.grid(row=1, column=0, sticky=tk.E+tk.W)
         self.listbox = tk.Listbox(self, xscrollcommand=self.xScroll.set, yscrollcommand=self.yScroll.set)
-        self.listbox.grid(row=5, column=5, sticky=tk.N+tk.S+tk.E+tk.W)
+        self.listbox.grid(row=0, column=0, sticky=tk.N+tk.S+tk.E+tk.W)
         cities = ('CASTELL DE L''ARENY',
              'CASTELLADRAL',
              'CASTELLAR',
