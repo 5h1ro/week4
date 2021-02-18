@@ -122,12 +122,13 @@ class LoginFrame(tkinter.Frame):
         # membuat grid
         self.namaSelect.grid(row=2, column=0, columnspan=2, sticky=W)
 
-# Clear
+# button pict
 
         self.foto = Button(self)
-        self.foto['text'] = 'img btn'
+        # deklarasi foto
         self.photo = PhotoImage(file = "logo.png") 
-        self.photoimage = self.photo.subsample(50, 50) 
+        #mengatur ukuran button
+        self.photoimage = self.photo.subsample(20, 20) 
         self.foto['image'] = self.photoimage
         # membuat grid
         self.foto.grid(row=3, column=0, columnspan=2)
