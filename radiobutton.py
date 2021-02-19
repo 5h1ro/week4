@@ -27,7 +27,7 @@ class LoginFrame(tkinter.Frame):
         self.JK['bg'] = '#ccf2f4'
         self.JK['font'] = 'Helvetica 12 bold'
         self.JK.grid(row=0, column=0, sticky=W)
-        self.jkl = Radiobutton(self, command=lambda:self.JK.destroy)
+        self.jkl = Radiobutton(self, command=self.JK.destroy)
         # merubah ketika di klik
         self.jkl['activebackground'] = '#f1d1d0'
         self.jkl['activeforeground'] = '#16c79a'
@@ -44,6 +44,8 @@ class LoginFrame(tkinter.Frame):
         self.jkl['relief'] = 'groove'
         self.jkl['text'] = 'Laki-Laki'
         self.jkl['textvariable'] = 'jkl'
+        self.jkl['underline'] = '0'
+        self.jkl['width'] = '4'
         self.jkl['variable'] = 'Laki-Laki'
         # merubah font
         self.jkl.grid(row=0, column=1,sticky=tkinter.W )
@@ -56,6 +58,7 @@ class LoginFrame(tkinter.Frame):
         self.jkw['variable'] = 'Wanita'
         # merubah font
         self.jkw['font'] = 'Helvetica' 
+        self.jkw['wraplength'] = '50' 
         # merubah ketika di klik
         self.jkw['activebackground'] = '#f1d1d0'
         self.jkw['activeforeground'] = '#16c79a'
@@ -102,6 +105,115 @@ class LoginFrame(tkinter.Frame):
         # merubah font
         self.jki['font'] = 'Helvetica' 
         self.jki.grid(row=4, column=1,sticky=tkinter.W )
+
+
+# deselect
+
+
+        self.deselect = Button(self, command=self.jkl.deselect)
+        self.deselect['text'] = 'Submit'
+        # merubah bg
+        self.deselect['bg'] = '#16c79a'
+        # merubah ukuran border
+        self.deselect['bd'] = '3px'
+        # merubah warna fg atau text
+        self.deselect['fg'] = '#91091e' 
+        # merubah font
+        self.deselect['font'] = 'Helvetica' 
+        # merubah font
+        self.deselect['justify'] = 'right'
+        # merubah width
+        self.deselect['width'] = '43'
+        # set nama variable
+        self.deselect['relief'] = 'raised' 
+        # membuat button berbeda saat di tekan
+        self.deselect['activebackground'] = '#d3e0ea' 
+        # membuat teks berbeda saat di tekan
+        self.deselect['activeforeground'] = '#ef4f4f'
+        # membuat grid
+        self.deselect.grid(row=0, column=2)
+
+
+# flash
+
+
+        self.flash = Button(self, command=self.jkl.flash)
+        self.flash['text'] = 'Submit'
+        # merubah bg
+        self.flash['bg'] = '#16c79a'
+        # merubah ukuran border
+        self.flash['bd'] = '3px'
+        # merubah warna fg atau text
+        self.flash['fg'] = '#91091e' 
+        # merubah font
+        self.flash['font'] = 'Helvetica' 
+        # merubah font
+        self.flash['justify'] = 'right'
+        # merubah width
+        self.flash['width'] = '43'
+        # set nama variable
+        self.flash['relief'] = 'raised' 
+        # membuat button berbeda saat di tekan
+        self.flash['activebackground'] = '#d3e0ea' 
+        # membuat teks berbeda saat di tekan
+        self.flash['activeforeground'] = '#ef4f4f'
+        # membuat grid
+        self.flash.grid(row=1, column=2)
+
+
+
+# flash
+
+
+        self.invoke = Button(self, command=self.jkl.invoke)
+        self.invoke['text'] = 'Submit'
+        # merubah bg
+        self.invoke['bg'] = '#16c79a'
+        # merubah ukuran border
+        self.invoke['bd'] = '3px'
+        # merubah warna fg atau text
+        self.invoke['fg'] = '#91091e' 
+        # merubah font
+        self.invoke['font'] = 'Helvetica' 
+        # merubah font
+        self.invoke['justify'] = 'right'
+        # merubah width
+        self.invoke['width'] = '43'
+        # set nama variable
+        self.invoke['relief'] = 'raised' 
+        # membuat button berbeda saat di tekan
+        self.invoke['activebackground'] = '#d3e0ea' 
+        # membuat teks berbeda saat di tekan
+        self.invoke['activeforeground'] = '#ef4f4f'
+        # membuat grid
+        self.invoke.grid(row=2, column=2)
+
+
+# flash
+
+
+        self.select = Button(self, command=self.jkl.select)
+        self.select['text'] = 'Submit'
+        # merubah bg
+        self.select['bg'] = '#16c79a'
+        # merubah ukuran border
+        self.select['bd'] = '3px'
+        # merubah warna fg atau text
+        self.select['fg'] = '#91091e' 
+        # merubah font
+        self.select['font'] = 'Helvetica' 
+        # merubah font
+        self.select['justify'] = 'right'
+        # merubah width
+        self.select['width'] = '43'
+        # set nama variable
+        self.select['relief'] = 'raised' 
+        # membuat button berbeda saat di tekan
+        self.select['activebackground'] = '#d3e0ea' 
+        # membuat teks berbeda saat di tekan
+        self.select['activeforeground'] = '#ef4f4f'
+        # membuat grid
+        self.select.grid(row=3, column=2)
 
 # submit
 
