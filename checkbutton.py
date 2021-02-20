@@ -67,11 +67,11 @@ class LoginFrame(tkinter.Frame):
         self.show['wraplength'] = 100
         # mengatur text
         self.show['text'] = 'Tampilkan Password'
-        self.show.grid(row=3, column=0, sticky=W)
+        self.show.grid(row=0, column=0, sticky=W)
         def text():
             self.text = Label(self)
             self.text['text']=self.cek.get()
-            self.text.grid(row=3, column=1)
+            self.text.grid(row=0, column=1)
         self.show['command'] = text
 
 # gambar
@@ -84,14 +84,14 @@ class LoginFrame(tkinter.Frame):
         self.gambar['image'] = self.photoimages
         # mengatur apakah aktif atau tidak
         self.gambar['state'] = 'disable'
-        self.gambar.grid(row=4, column=0, sticky=W)
+        self.gambar.grid(row=1, column=0, sticky=W)
 # bitmap
         self.gambarbt = Checkbutton(self)
         # mengatur gambar bitmap
         self.gambarbt['bitmap'] = 'error'
         # mengatur apakah aktif atau tidak
         self.gambarbt['state'] = 'disable'
-        self.gambarbt.grid(row=4, column=1, sticky=W)
+        self.gambarbt.grid(row=2, column=0, sticky=W)
 # bitmap
         self.gambardf = Checkbutton(self)
         # mengatur apakah aktif atau tidak
@@ -100,31 +100,31 @@ class LoginFrame(tkinter.Frame):
         self.gambardf['text'] = 'disable'
         # mengatur warna saat checkbutton di disable
         self.gambardf['disabledforeground'] = 'red'
-        self.gambardf.grid(row=5, column=1, sticky=W)
+        self.gambardf.grid(row=3, column=0, sticky=W)
 
-# button
+# select
         self.namaSelect = Button(self, command=self.show.select)
         self.namaSelect['text'] = 'Select'
         # membuat grid
         self.namaSelect.grid(row=0, column=2, sticky=W)
-# button
+# deselect
         self.namaSelect = Button(self, command=self.show.deselect)
-        self.namaSelect['text'] = 'deSelect'
+        self.namaSelect['text'] = 'Deselect'
         # membuat grid
         self.namaSelect.grid(row=1, column=2, sticky=W)
-# button
+# flash
         self.namaSelect = Button(self, command=self.show.flash)
-        self.namaSelect['text'] = 'flash'
+        self.namaSelect['text'] = 'Flash'
         # membuat grid
         self.namaSelect.grid(row=2, column=2, sticky=W)
-# button
+# invoke
         self.namaSelect = Button(self, command=self.show.invoke)
-        self.namaSelect['text'] = 'invoke'
+        self.namaSelect['text'] = 'Invoke'
         # membuat grid
         self.namaSelect.grid(row=3, column=2, sticky=W)
-# button
+# toogle
         self.namaSelect = Button(self, command=self.show.toggle)
-        self.namaSelect['text'] = 'toogle'
+        self.namaSelect['text'] = 'Toogle'
         # membuat grid
         self.namaSelect.grid(row=4, column=2, sticky=W)
         
