@@ -20,7 +20,6 @@ class LoginFrame(tkinter.Frame):
         self['background'] = "#ccf2f4"
         
 # jenis kelamin
-
         self.JK = tkinter.Label(self, text="Jenis Kelamin      :")
         
         self.JK['fg'] = '#0a043c'
@@ -44,9 +43,10 @@ class LoginFrame(tkinter.Frame):
         self.jkl['relief'] = 'groove'
         self.jkl['text'] = 'Laki-Laki'
         self.jkl['textvariable'] = 'jkl'
+        self.jkl['value'] = 'on'
         self.jkl['underline'] = '0'
         self.jkl['width'] = '4'
-        self.jkl['variable'] = 'Laki-Laki'
+        self.jkl['variable'] = 'Laki-laki'
         # merubah font
         self.jkl.grid(row=0, column=1,sticky=tkinter.W )
 
@@ -111,7 +111,7 @@ class LoginFrame(tkinter.Frame):
 
 
         self.deselect = Button(self, command=self.jkl.deselect)
-        self.deselect['text'] = 'Submit'
+        self.deselect['text'] = 'deselect'
         # merubah bg
         self.deselect['bg'] = '#16c79a'
         # merubah ukuran border
@@ -138,7 +138,7 @@ class LoginFrame(tkinter.Frame):
 
 
         self.flash = Button(self, command=self.jkl.flash)
-        self.flash['text'] = 'Submit'
+        self.flash['text'] = 'flash'
         # merubah bg
         self.flash['bg'] = '#16c79a'
         # merubah ukuran border
@@ -162,11 +162,11 @@ class LoginFrame(tkinter.Frame):
 
 
 
-# flash
+# invoke
 
 
         self.invoke = Button(self, command=self.jkl.invoke)
-        self.invoke['text'] = 'Submit'
+        self.invoke['text'] = 'Invoke'
         # merubah bg
         self.invoke['bg'] = '#16c79a'
         # merubah ukuran border
@@ -189,11 +189,11 @@ class LoginFrame(tkinter.Frame):
         self.invoke.grid(row=2, column=2)
 
 
-# flash
+# select
 
 
         self.select = Button(self, command=self.jkl.select)
-        self.select['text'] = 'Submit'
+        self.select['text'] = 'Select'
         # merubah bg
         self.select['bg'] = '#16c79a'
         # merubah ukuran border
@@ -215,31 +215,6 @@ class LoginFrame(tkinter.Frame):
         # membuat grid
         self.select.grid(row=3, column=2)
 
-# submit
-
-
-        self.submit = Button(self)
-        self.submit['text'] = 'Submit'
-        # merubah bg
-        self.submit['bg'] = '#16c79a'
-        # merubah ukuran border
-        self.submit['bd'] = '3px'
-        # merubah warna fg atau text
-        self.submit['fg'] = '#91091e' 
-        # merubah font
-        self.submit['font'] = 'Helvetica' 
-        # merubah font
-        self.submit['justify'] = 'right'
-        # merubah width
-        self.submit['width'] = '43'
-        # set nama variable
-        self.submit['relief'] = 'raised' 
-        # membuat button berbeda saat di tekan
-        self.submit['activebackground'] = '#d3e0ea' 
-        # membuat teks berbeda saat di tekan
-        self.submit['activeforeground'] = '#ef4f4f'
-        # membuat grid
-        self.submit.grid(row=8, column=0, columnspan=2)
 
 
 

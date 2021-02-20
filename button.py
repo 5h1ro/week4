@@ -1,8 +1,6 @@
 import tkinter
 from tkinter import *
 
-username = 'admin'
-password = 'admin'
 
 class LoginFrame(tkinter.Frame):
 
@@ -13,16 +11,6 @@ class LoginFrame(tkinter.Frame):
         self.utama()
         self.grid_rowconfigure(1, weight=1)
         self.grid_columnconfigure(1, weight=1)
-        
-        # # bind to focus events
-    #     self.bind('<FocusIn>', self._on_focus)
-    #     self.bind('<FocusOut>', self._on_lose_focus)
-
-    # def _on_focus(self, event):
-    #     self.configure(bg=self.namaSelect['highlightcolor'])
-
-    # def _on_lose_focus(self, event):
-    #     self.configure(bg=self._bg)
 
 
     def utama(self) :
@@ -94,31 +82,33 @@ class LoginFrame(tkinter.Frame):
         self.namaSelect = Button(self, 
             command=lambda:self.nama.select_range(1, END)
         )
-        self.namaSelect['text'] = 'Select'
-        # merubah bg
-        self.namaSelect['bg'] = '#16c79a'
+        
+        # membuat button berbeda saat di tekan
+        self.namaSelect['activebackground'] = '#d3e0ea'
+        # membuat teks berbeda saat di tekan
+        self.namaSelect['activeforeground'] = '#ef4f4f'
         # merubah ukuran border
         self.namaSelect['bd'] = '3px'
+        # merubah bg
+        self.namaSelect['bg'] = '#16c79a'
         # merubah warna fg atau text
         self.namaSelect['fg'] = '#91091e' 
         # merubah font
         self.namaSelect['font'] = 'Helvetica' 
-        # merubah font
-        self.namaSelect['justify'] = 'left'
-        # merubah width
-        self.namaSelect['width'] = '43'
-        # merubah width
+        # set nama untuk tombol
+        self.namaSelect['text'] = 'Select'
+        # merubah height
         self.namaSelect['height'] = '2'
+        # membuat button berbeda saat di tekan
+        # self.namaSelect['highlightcolor'] = '#e40017' 
+        # merubah rata huruf
+        self.namaSelect['justify'] = 'left'
         # set nama variable
         self.namaSelect['relief'] = 'raised' 
-        # membuat button berbeda saat di tekan
-        self.namaSelect['activebackground'] = '#d3e0ea' 
-        # membuat button berbeda saat di tekan
-        self.namaSelect['highlightcolor'] = '#e40017' 
-        # membuat teks berbeda saat di tekan
-        self.namaSelect['activeforeground'] = '#ef4f4f'
-        # underline
+        # underline atau garis bawah
         self.namaSelect['underline'] = '0'
+        # merubah width
+        self.namaSelect['width'] = '43' 
         # membuat grid
         self.namaSelect.grid(row=2, column=0, columnspan=2, sticky=W)
 
@@ -129,9 +119,10 @@ class LoginFrame(tkinter.Frame):
         self.photo = PhotoImage(file = "logo.png") 
         #mengatur ukuran button
         self.photoimage = self.photo.subsample(20, 20) 
+        # mengatur gambar button
         self.foto['image'] = self.photoimage
         # membuat grid
-        self.foto.grid(row=3, column=0, columnspan=2)
+        self.foto.grid(row=3, column=0)
 
         
 # Clear
@@ -149,12 +140,12 @@ class LoginFrame(tkinter.Frame):
         # merubah font
         self.namaClick['justify'] = 'left'
         # merubah width
-        self.namaClick['width'] = 43
+        self.namaClick['width'] = 10
         # merubah width
         self.namaClick['height'] = 2
         # merubah padding
-        self.namaClick['padx'] = 100
-        self.namaClick['pady'] = 100
+        self.namaClick['padx'] = 10
+        self.namaClick['pady'] = 10
         # state (actif atau tidak button)
         self.namaClick['state'] = 'disable'
         # set nama variable
@@ -170,7 +161,7 @@ class LoginFrame(tkinter.Frame):
 
 
         # membuat grid
-        self.namaClick.grid(row=4, column=0, columnspan=2)
+        self.namaClick.grid(row=4, column=0)
 
 
 def main():
