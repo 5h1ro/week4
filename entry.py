@@ -110,7 +110,7 @@ class LoginFrame(tkinter.Frame):
         # membuat grid
         self.password.grid(row=2, column=1, sticky=W)
 
-# select
+# select_range
 
 
         self.namaSelect = Button(self, 
@@ -218,7 +218,7 @@ class LoginFrame(tkinter.Frame):
         # membuat grid
         self.namaClick.grid(row=6, column=0, columnspan=2)
 
-# select_form(index)
+# select_present
 
         self.namaClick = Button(self, command=lambda:self.nama.select_present)
         self.namaClick['text'] = 'present'
